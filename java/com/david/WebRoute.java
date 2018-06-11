@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 @Target(ElementType.METHOD)
 public @interface WebRoute {
     String value();
-    FormSubmitEvent.MethodType method();
+    FormSubmitEvent.MethodType method() default FormSubmitEvent.MethodType.GET;
 
 
 }

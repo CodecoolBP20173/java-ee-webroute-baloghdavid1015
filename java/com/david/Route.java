@@ -38,6 +38,10 @@ public class Route {
     }
 
     @WebRoute(method=POST, value = "/users")
+    public void onUserPost(HttpExchange reqData) throws IOException {
+        String response = "Post method on users";
+        genSite(reqData, response);
+    }
 
     public void onError(HttpExchange reqData) throws IOException {
         String response = "Something went wrong!";
